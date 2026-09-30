@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Secret Mission</title>
+<link rel="stylesheet" href="style.css">
+
+    <style>
+
+        body {
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+
+        h1 {
+            color: red;
+            margin-top: 150px;
+        }
+
+        input {
+            padding: 10px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: red;
+            color: white;
+            border: none;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>SECRET MISSION</h1>
+
+    <p>Enter your name, Agent</p>
+
+    <input type="text" id="name">
+
+    <br><br>
+
+    <button onclick="nextPage()">ENTER MISSION</button>
+
+    <script>
+
+        function nextPage() {
+
+            window.location.href = "welcome.html";
+
+        }
+
+    </script>
+
+</body>
+
+</html>

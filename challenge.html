@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Challenge Mission</title>
+<link rel="stylesheet" href="style.css">
+    <style>
+
+        body {
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+
+        h1 {
+            color: red;
+            margin-top: 100px;
+        }
+
+        .mission {
+            margin-top: 50px;
+            padding: 30px;
+        }
+
+        button {
+            padding: 12px 25px;
+            margin: 10px;
+            background-color: darkred;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: red;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>⚡ CHALLENGE MISSION</h1>
+
+    <div class="mission">
+
+        <h2 id="question">
+            Name 5 things in the room in 10 seconds!
+        </h2>
+
+        <br>
+
+        <button onclick="nextMission()">
+            NEXT MISSION
+        </button>
+
+        <br>
+
+        <button onclick="goBack()">
+            BACK
+        </button>
+
+    </div>
+
+
+    <script>
+
+        let missions = [
+
+            "Name 5 things in the room in 10 seconds!",
+
+            "Name 5 countries in 10 seconds!",
+
+            "Name 5 animals without repeating yourself!",
+
+            "Say 5 words that start with the letter S!",
+
+            "Count backwards from 20 to 1!",
+
+            "Name 5 movies in 10 seconds!",
+
+            "Name 5 foods without stopping!",
+
+            "Say 3 tongue twisters quickly!",
+
+            "Remember these 5 words: RED, BOOK, STAR, MOON, CAT!",
+
+            "Create a new word and explain what it means!"
+
+        ];
+
+        let number = 0;
+
+
+        function nextMission() {
+
+            number = number + 1;
+
+            if (number < missions.length) {
+
+                document.getElementById("question").innerHTML =
+                    missions[number];
+
+            } else {
+
+                document.getElementById("question").innerHTML =
+                    "⚡ CHALLENGE COMPLETE!";
+
+            }
+
+        }
+
+
+        function goBack() {
+
+            window.location.href = "mood.html";
+
+        }
+
+    </script>
+
+</body>
+
+</html>

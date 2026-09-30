@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Mystery Mission</title>
+<link rel="stylesheet" href="style.css">
+
+    <style>
+
+        body {
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+
+        h1 {
+            color: red;
+            margin-top: 100px;
+        }
+
+        .mission {
+            margin-top: 50px;
+            padding: 30px;
+        }
+
+        button {
+            padding: 12px 25px;
+            margin: 10px;
+            background-color: darkred;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: red;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>🔮 MYSTERY MISSION</h1>
+
+    <div class="mission">
+
+        <h2 id="question">
+            A man walks into a room and turns off a light.
+            Why might he do it?
+        </h2>
+
+        <br>
+
+        <button onclick="nextMission()">
+            NEXT MISSION
+        </button>
+
+        <br>
+
+        <button onclick="goBack()">
+            BACK
+        </button>
+
+    </div>
+
+
+    <script>
+
+        let missions = [
+
+            "A man walks into a room and turns off a light. Why might he do it?",
+
+            "You find a mysterious note with no name on it. What would you do?",
+
+            "You hear a strange sound behind you. What is your first reaction?",
+
+            "You find a locked box with no key. What could be inside?",
+
+            "Someone leaves three clues: red, clock, door. What mystery could they describe?",
+
+            "You discover a message written backwards. What would you try first?",
+
+            "A person disappears from a room, but the door was locked. What could have happened?",
+
+            "You find an unknown object on your desk. What questions would you ask?",
+
+            "A secret agent gives you only one clue: 'Look where time stops.' Where would you look?",
+
+            "You receive a message saying: 'The mission starts at midnight.' What would you investigate first?"
+
+        ];
+
+        let number = 0;
+
+
+        function nextMission() {
+
+            number = number + 1;
+
+            if (number < missions.length) {
+
+                document.getElementById("question").innerHTML =
+                    missions[number];
+
+            } else {
+
+                document.getElementById("question").innerHTML =
+                    "🔮 MYSTERY SOLVED! Mission complete!";
+
+            }
+
+        }
+
+
+        function goBack() {
+
+            window.location.href = "mood.html";
+
+        }
+
+    </script>
+
+</body>
+
+</html>

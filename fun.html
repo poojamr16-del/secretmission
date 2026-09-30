@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Fun Mission</title>
+<link rel="stylesheet" href="style.css">
+
+    <style>
+
+        body {
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+
+        h1 {
+            color: red;
+            margin-top: 100px;
+        }
+
+        .mission {
+            margin-top: 50px;
+            padding: 30px;
+        }
+
+        button {
+            padding: 12px 25px;
+            margin: 10px;
+            background-color: darkred;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: red;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>🎉 FUN MISSION</h1>
+
+    <div class="mission">
+
+        <h2 id="question">
+            Do your best celebrity impression!
+        </h2>
+
+        <br>
+
+        <button onclick="nextMission()">
+            NEXT MISSION
+        </button>
+
+        <br>
+
+        <button onclick="goBack()">
+            BACK
+        </button>
+
+    </div>
+
+
+    <script>
+
+        let missions = [
+
+            "Do your best celebrity impression!",
+
+            "Dance for 10 seconds without music!",
+
+            "Say the alphabet backwards!",
+
+            "Make the funniest face you can!",
+
+            "Pretend you are a news reporter for 30 seconds!",
+
+            "Talk like a robot for one minute!",
+
+            "Tell a really bad joke!",
+
+            "Act like your favourite movie character!",
+
+            "Sing the first song that comes to your mind!",
+
+            "Try to make someone laugh without speaking!"
+
+        ];
+
+        let number = 0;
+
+
+        function nextMission() {
+
+            number = number + 1;
+
+            if (number < missions.length) {
+
+                document.getElementById("question").innerHTML = missions[number];
+
+            } else {
+
+                document.getElementById("question").innerHTML =
+                    "🎉 You completed all the FUN missions!";
+
+            }
+
+        }
+
+
+        function goBack() {
+
+            window.location.href = "mood.html";
+
+        }
+
+    </script>
+
+</body>
+
+</html>

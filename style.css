@@ -1,0 +1,220 @@
+/* ============================= */
+/* SECRET MISSION DESIGN */
+/* ============================= */
+
+body {
+    background-color: #050505;
+    color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main boxes */
+
+.container,
+.mission {
+    width: 80%;
+    max-width: 650px;
+    margin: 80px auto;
+    padding: 45px 30px;
+
+    background-color: #0d0d0d;
+
+    border: 1px solid #ff1a1a;
+    border-radius: 25px;
+
+    box-shadow:
+        0px 0px 10px #ff0000,
+        0px 0px 40px #330000;
+
+    position: relative;
+}
+
+/* Small red line on top */
+
+.container:before,
+.mission:before {
+    content: "";
+    display: block;
+
+    width: 80px;
+    height: 4px;
+
+    background-color: red;
+
+    margin: -45px auto 30px auto;
+
+    box-shadow: 0px 0px 10px red;
+}
+
+/* Main title */
+
+h1 {
+    color: red;
+
+    font-size: 42px;
+
+    letter-spacing: 6px;
+
+    text-shadow:
+        0px 0px 5px red,
+        0px 0px 20px red;
+
+    margin-bottom: 25px;
+}
+
+/* Other headings */
+
+h2 {
+    color: white;
+
+    font-size: 25px;
+
+    line-height: 1.5;
+
+    margin: 30px 10px;
+}
+
+/* Paragraph */
+
+p {
+    color: #bbbbbb;
+
+    font-size: 17px;
+
+    line-height: 1.6;
+}
+
+/* Input box */
+
+input {
+    width: 240px;
+
+    padding: 14px;
+
+    margin: 15px;
+
+    background-color: #080808;
+
+    color: white;
+
+    border: 1px solid #ff3333;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    font-size: 16px;
+}
+
+input:focus {
+    border-color: red;
+
+    box-shadow: 0px 0px 15px red;
+}
+
+/* Buttons */
+
+button {
+    padding: 13px 28px;
+
+    margin: 10px;
+
+    background-color: #100000;
+
+    color: white;
+
+    border: 1px solid red;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    box-shadow: 0px 0px 8px #440000;
+}
+
+/* Button hover */
+
+button:hover {
+    background-color: red;
+
+    color: white;
+
+    box-shadow:
+        0px 0px 10px red,
+        0px 0px 25px red;
+}
+
+/* Mood buttons */
+
+.mood-button {
+    width: 190px;
+
+    height: 65px;
+
+    margin: 12px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    background-color: #0b0b0b;
+}
+
+/* Different mood button hover */
+
+.mood-button:hover {
+    transform: scale(1.05);
+}
+
+/* Mission question */
+
+#question {
+    background-color: #080808;
+
+    border-left: 4px solid red;
+
+    border-right: 4px solid red;
+
+    padding: 30px 20px;
+
+    margin: 35px auto;
+
+    width: 80%;
+
+    color: white;
+
+    font-size: 24px;
+
+    line-height: 1.6;
+
+    border-radius: 12px;
+
+    box-shadow: inset 0px 0px 20px #220000;
+}
+
+/* Back button */
+
+button[onclick="goBack()"] {
+    background-color: transparent;
+
+    border-color: #555;
+
+    color: #aaa;
+}
+
+button[onclick="goBack()"]:hover {
+    background-color: #222;
+
+    border-color: white;
+
+    box-shadow: none;
+}

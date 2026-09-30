@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Spicy Mission</title>
+<link rel="stylesheet" href="style.css">
+
+    <style>
+
+        body {
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+
+        h1 {
+            color: red;
+            margin-top: 100px;
+        }
+
+        .mission {
+            margin-top: 50px;
+            padding: 30px;
+        }
+
+        button {
+            padding: 12px 25px;
+            margin: 10px;
+            background-color: darkred;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: red;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>🌶️ SPICY MISSION</h1>
+
+    <div class="mission">
+
+        <h2 id="question">
+            Give someone a funny compliment!
+        </h2>
+
+        <br>
+
+        <button onclick="nextMission()">
+            NEXT MISSION
+        </button>
+
+        <br>
+
+        <button onclick="goBack()">
+            BACK
+        </button>
+
+    </div>
+
+
+    <script>
+
+        let missions = [
+
+            "Give someone a funny compliment!",
+
+            "Say something confidently that makes absolutely no sense!",
+
+            "Let someone choose your next Instagram caption!",
+
+            "Talk in a dramatic movie voice for 30 seconds!",
+
+            "Tell your funniest embarrassing moment!",
+
+            "Let the group give you a funny nickname!",
+
+            "Say the first thought that comes into your head!",
+
+            "Pretend you are famous and give an acceptance speech!",
+
+            "Challenge someone to a staring contest!",
+
+            "Tell someone a completely useless fact!"
+
+        ];
+
+        let number = 0;
+
+
+        function nextMission() {
+
+            number = number + 1;
+
+            if (number < missions.length) {
+
+                document.getElementById("question").innerHTML =
+                    missions[number];
+
+            } else {
+
+                document.getElementById("question").innerHTML =
+                    "🌶️ You completed all the SPICY missions!";
+
+            }
+
+        }
+
+
+        function goBack() {
+
+            window.location.href = "mood.html";
+
+        }
+
+    </script>
+
+</body>
+
+</html>

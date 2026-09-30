@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Brain Mission</title>
+<link rel="stylesheet" href="style.css">
+
+    <style>
+
+        body {
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+
+        h1 {
+            color: red;
+            margin-top: 100px;
+        }
+
+        .mission {
+            margin-top: 50px;
+            padding: 30px;
+        }
+
+        button {
+            padding: 12px 25px;
+            margin: 10px;
+            background-color: darkred;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: red;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>🧠 BRAIN MISSION</h1>
+
+    <div class="mission">
+
+        <h2 id="question">
+            What has hands but cannot clap?
+        </h2>
+
+        <br>
+
+        <button onclick="nextMission()">
+            NEXT MISSION
+        </button>
+
+        <br>
+
+        <button onclick="goBack()">
+            BACK
+        </button>
+
+    </div>
+
+
+    <script>
+
+        let missions = [
+
+            "What has hands but cannot clap?",
+
+            "What has a face and two hands but no arms or legs?",
+
+            "What number comes next: 2, 4, 6, 8, ?",
+
+            "What has keys but cannot open a door?",
+
+            "If you have 5 apples and take away 2, how many do you have?",
+
+            "What gets wetter the more it dries?",
+
+            "What has one eye but cannot see?",
+
+            "What can travel around the world while staying in one corner?",
+
+            "What has a neck but no head?",
+
+            "What goes up but never comes down?"
+
+        ];
+
+        let number = 0;
+
+
+        function nextMission() {
+
+            number = number + 1;
+
+            if (number < missions.length) {
+
+                document.getElementById("question").innerHTML =
+                    missions[number];
+
+            } else {
+
+                document.getElementById("question").innerHTML =
+                    "🧠 You completed all the BRAIN missions!";
+
+            }
+
+        }
+
+
+        function goBack() {
+
+            window.location.href = "mood.html";
+
+        }
+
+    </script>
+
+</body>
+
+</html>
